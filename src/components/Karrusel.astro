@@ -1,0 +1,343 @@
+---
+import Button from "../components/Button.astro";
+const speakers = [
+	{
+		name: "Arjun Malik",
+		image: "/arjun_malik.webp",
+		link: "/program/ai_tools_for_creatives",
+		about: "Arjun Malik is an AI strategist developing creative tools that help designers work faster, smarter, and with more freedom.",
+		about2: "Meet Arjun Malik at his Talk 'AI Tools for Creatives'.",
+	},
+	{
+		name: "Elena Motta",
+		image: "/elena_motta.webp",
+		link: "/program/3d-objects-in-motion",
+		about: "Elena Motta is a 3D animator and motion director at VoxelWorks, specializing in cinematic motion graphics.",
+		about2: "Meet Elena Motta at her Workshop '3D Objects in Motion'.",
+	},
+	{
+		name: "Jules Renner",
+		image: "/jules_renner.webp",
+		link: "/program/3d_modelling_for_product_imagery",
+		about: "Jules Renner is lead 3D artist at FormShift Studio, crafting product visuals for brands in tech, fashion, and beauty.",
+		about2: "Meet Jules Renner at her Workshop '3D Modelling for Product Imagery'.",
+	},
+	{
+		name: "Lena Alvarez",
+		image: "/lena_alvarez.webp",
+		link: "/program/the_future_of_animation_in_advertising_and_media",
+		about: "Lena Alvarez is a creative director at Shifted Studios with 15+ years animating for Nike, Samsung, Mercedes-Benz, and Netflix.",
+		about2: "Meet Lena Alvarez at her Talk 'The Future of Animation in Advertising and Media'.",
+	},
+	{
+		name: "Nico Delgado",
+		image: "/nico_delgado.webp",
+		link: "/program/mastering_video_production_with_a_limited_budget",
+		about: "Nico Delgado is a director and video producer known for crafting high-impact campaigns on minimal budgets for brands like Nike and Red Bull.",
+		about2: "Meet Nico Delgado at his Talk 'Mastering Video Production with a Limited Budget'.",
+	},
+	{
+		name: "Sam Taylor",
+		image: "/sam_taylor.webp",
+		link: "/program/digital_storytelling_in_the_age_of_short_attention_spans",
+		about: "Sam Taylor is a filmmaker and creative director known for crafting engaging short-form videos for Spotify, Airbnb, and more.",
+		about2: "Meet Sam Taylor at his Talk 'Digital Storytelling in the Age of Short Attention Spans'.",
+	},
+	{
+		name: "Takumi Hara",
+		image: "/takumi_hara.webp",
+		link: "/program/ai-driven_character_design",
+		about: "Takumi Hara and Eloise Thorne are pioneering animators using AI to innovate character design and animation production.",
+		about2: "Meet Takumi Hara at her Workshop 'AI-driven Character Design'.",
+	},
+];
+---
+
+<h3>( Speakers )</h3>
+<div class="carousel-container">
+	<ul id="carousel" class="carousel">
+		<!-- Cloned end items at start -->
+		{
+			speakers.slice(-3).map((speaker) => (
+				<li class="carousel-item" key={`clone-start-${speaker.name}`}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+		<!-- Cloned end items at start -->
+		{
+			speakers.slice(-3).map((speaker) => (
+				<li class="carousel-item" key={`clone-start-${speaker.name}`}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+
+		<!-- Real items -->
+		{
+			speakers.map((speaker) => (
+				<li class="carousel-item" key={speaker.name}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+		<!-- Real items -->
+		{
+			speakers.map((speaker) => (
+				<li class="carousel-item" key={speaker.name}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+
+		<!-- Cloned start items at end -->
+		{
+			speakers.slice(0, 3).map((speaker) => (
+				<li class="carousel-item" key={`clone-end-${speaker.name}`}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+		<!-- Cloned start items at end -->
+		{
+			speakers.slice(0, 3).map((speaker) => (
+				<li class="carousel-item" key={`clone-end-${speaker.name}`}>
+					<img data-cursor="fill" src={`/imgs/${speaker.image}`} alt={speaker.name} />
+					<a href={speaker.link}>
+						<div class="text" data-cursor="fill">
+							<p class="name">{speaker.name}</p>
+							<p class="about">{speaker.about}</p>
+							<p class="about">{speaker.about2}</p>
+							<Button
+								data-cursor="fill"
+								class="button"
+								text="View event"
+								button_class="primary"
+							/>
+						</div>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<style>
+	h3 {
+		margin-left: 40px;
+	}
+	.carousel-container {
+		width: 100%;
+		height: 90vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		position: relative;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	.carousel {
+		display: flex;
+		gap: 2rem;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		padding: 0 10vw; /* so items peek on sides */
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+	}
+
+	.carousel::-webkit-scrollbar {
+		display: none;
+	}
+
+	.carousel-item {
+		flex: 0 0 calc(80vw / 3); /* 3 items visible in 80% of screen */
+		scroll-snap-align: center;
+		text-align: center;
+		transition:
+			height 0.3s ease,
+			transform 0.3s ease;
+	}
+
+	.carousel-item img {
+		height: 400px;
+		width: auto;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+		transition: height 0.3s ease;
+		opacity: 0.5;
+	}
+
+	.text {
+		position: absolute;
+		top: 17%;
+		left: 57%;
+		display: none;
+	}
+	p.name {
+		font-weight: 700 !important;
+	}
+	/* Active class for den i midten*/
+	.carousel-item.active img {
+		height: 500px;
+		opacity: 1;
+		transition: 0.5s;
+	}
+	.carousel-item.active .text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 200px;
+		text-align: left;
+		gap: 20px;
+	}
+	.carousel-item.active:hover img {
+		scale: 1.02;
+	}
+	@media (max-width: 800px) {
+		.carousel-container {
+			height: 100vh;
+		}
+		h3 {
+			margin-left: 20px;
+			margin-top: 40px;
+		}
+		.carousel {
+			margin-top: 200px;
+		}
+		.text {
+			position: absolute;
+			top: 20px;
+			left: 25px;
+			display: none;
+		}
+		.carousel-item.active .text {
+			max-width: 300px;
+		}
+		.carousel-item.active img {
+			height: 330px;
+		}
+		.carousel-item img {
+			height: 200px;
+		}
+	}
+</style>
+<script>
+	const carousel = document.getElementById("carousel");
+	const items = carousel.querySelectorAll(".carousel-item");
+	const realItemCount = items.length / 3; // total = clonesStart + real + clonesEnd
+	const itemWidth = items[0].offsetWidth + 32; // 32 = ~2rem gap
+
+	carousel.scrollLeft = realItemCount * itemWidth;
+
+	function updateActiveItem() {
+		const center = carousel.scrollLeft + carousel.offsetWidth / 2;
+
+		items.forEach((item) => {
+			const box = item.getBoundingClientRect();
+			const itemCenter = box.left + box.width / 2;
+			item.classList.toggle(
+				"active",
+				Math.abs(itemCenter - window.innerWidth / 2) < box.width / 2,
+			);
+		});
+	}
+
+	function handleLoop() {
+		updateActiveItem();
+	}
+
+	carousel.addEventListener("scroll", handleLoop);
+
+	window.addEventListener("resize", () => {
+		carousel.scrollLeft = realItemCount * itemWidth;
+	});
+
+	items.forEach((item) => {
+		const img = item.querySelector("img");
+		img.style.cursor = "pointer";
+
+		img.addEventListener("click", () => {
+			const itemLeft = item.offsetLeft;
+			const itemCenter = itemLeft + item.offsetWidth / 2;
+			const targetScrollLeft = itemCenter - carousel.offsetWidth / 2;
+
+			carousel.scrollTo({
+				left: targetScrollLeft,
+				behavior: "smooth",
+			});
+		});
+	});
+
+	updateActiveItem();
+</script>
